@@ -66,15 +66,13 @@ let bool = true;
 // 5. Khai báo biến với kiểu dữ liệu Array như sau: [1,2,3,4,5,6,7,8,9,10]
 let arr = [1,2,3,4,5,6,7,8,9,10];
   // 5.1 Tính tổng (+) phần tử đầu tiên (0) và phần từ thứ 2 (1)
-    let sum;
-    sum= arr[0] + arr[1]; // 1+2= 3
+    let sum =  arr[0] + arr[1]; // 1+2= 3
    //5.2 Tính tích (*) phần tử đầu tiên (0) và phần từ cuối cùng (9)
-   let total;
-   total =  arr[0] * arr[9]; //1* 10 = 10
+   let total =  arr[0] * arr[9]; //1* 10 = 10
 //  6. Khai báo 1 biến với kiểu dữ liệu Object, bào gồm firstName, lastName, age, favorite
-    let info = { firstName:'Tran' , lastName:'Luong', age: 21 , favorite: 'game'};
+    let info = { firstName:'Lương' , lastName:'Trần', age: 21 , favorite: 'game'};
 // 6.1 Thay đổi firstName, lastName với text bất kỳ
-    info.firstName = 'Thị';
-    info.lastName ='Mai';
+    info.firstName = 'Mai';
+    info.lastName ='Thị';
 //    6.2 In ra màn hình firstName + lastName mới
     console.log(`firstName: ${info.firstName} và lastName: ${info.lastName}`);

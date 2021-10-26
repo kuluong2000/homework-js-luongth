@@ -1,0 +1,2 @@
+1. Làm lại bài tập popup gallery, các chức năng đều được thực hiện bởi VueJS (Bài tập buổi 4)
+2. Làm lại bài tập switch color, các chức năng đều được thực hiện bởi VueJS (Bài tập buổi 4)

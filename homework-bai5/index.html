@@ -19,53 +19,8 @@
       </div>
     </div>
     <section id="gallery" class="gallery">
-      <!-- Image 1 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-anna-shvets-4588065.jpg" alt="1" />
-      </div>
-
-      <!-- Image 2 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-anthony-139639.jpg" alt="2" />
-      </div>
-
-      <!-- Image 3 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-burst-374825.jpg" alt="3" />
-      </div>
-
-      <!-- Image 4 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-carlos-spitzer-17811.jpg" alt="4" />
-      </div>
-
-      <!-- Image 5 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-charles-1851164.jpg" alt="5" />
-      </div>
-
-      <!-- Image 6 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-frans-van-heerden-631292.jpg" alt="6" />
-      </div>
-
-      <!-- Image 7 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-gratisography-4602.jpg" alt="7" />
-      </div>
-
-      <!-- Image 8 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-jan-kopřiva-3614358.jpg" alt="8" />
-      </div>
-
-      <!-- Image 9 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-jeremy-bishop-2422915.jpg" alt="9" />
-      </div>
-      <!-- Image 10 -->
-      <div @click="imgClick($event)" class="img-container">
-        <img src="img/small/pexels-jim-long-949859.jpg" alt="10" />
+      <div v-for="item in images" class="img-container" @click="imgClick(item.bigImage)">
+        <img :src="item.image" alt="" />
       </div>
     </section>
     <div id="books" class="section-default">Section Books</div>
@@ -74,9 +29,9 @@
 
     <!-- modal -->
     <div class="modal" id="modal-1 " :class="activeClass" @click="closeModal($event)">
-      <img :src="srcImg" alt="" class="full-img" />
+      <img :src="srcImg" alt="" class="full-img" @click="noChangeCloseModal" />
     </div>
-    <section class="color" @click="changeColor">
+    <section class="color" :style=" {backgroundColor:color}" @click="changeColor">
       <button class="btn-color">click me</button>
       <div class="text">
         <p>Mã màu :</p>
